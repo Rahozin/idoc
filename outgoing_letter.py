@@ -4,9 +4,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from keyboard import write
 from time import sleep
+from getpass import getuser, getpass
 
-USERNAME = 'vrsp04'
+USERNAME = getuser()
 PASSWORD = 'Пу556834'
+# PASSWORD = getpass("Password: ")
 ACCOUNTANT = 'Поло'
 CHIEF = 'Семик'
 
@@ -56,8 +58,11 @@ def feel_in_forms(url):
         sleep(2)
         small_name_box = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, "sName_Document")))
         small_name_box.click()
+
         # write('Про направлення договору з розробки та видачі ТУ', 0.1)
         write('Про видачу ТУ та АНП', 0.1)
+        # write('Про направлення договору ВО', 0.1)
+        
         doc_type_box = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH,
         "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/form/div[30]/div/select-field/div/div/div[2]/div/div[2]/div[1]/span/i")))
         doc_type_box.click()
@@ -65,7 +70,7 @@ def feel_in_forms(url):
         "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/form/div[30]/div/select-field/div/div/div[2]/div/div[2]/ul/li/div[3]")))
         doc_type_box2.click()
         delivery_method_box2 = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH,
-        "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/form/div[31]/div/enum-field/div/div/div[2]/div/select/option[7]")))
+        "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/form/div[31]/div/enum-field/div/div/div[2]/div/select/option[6]")))
         delivery_method_box2.click()
         subdivision_box = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH,
         "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/form/div[32]/div/select-field/div/div/div[2]/div/div[2]/div[1]/span/i")))
