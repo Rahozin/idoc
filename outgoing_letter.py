@@ -52,104 +52,113 @@ def feel_in_forms(url):
             driver, 10).until(
             EC.element_to_be_clickable(
                 (By.XPATH,
-                 "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/div[1]/div/document-participant-list/div/div[1]/div/div/div[2]/div[1]/user-popup/span/span/span")))
+                 "/html/body/div[1]/snap-content/div[2]/div[3]/div/div[2]/div[1]/div/document-participant-list/div/div[1]/div/div/div[2]/div[1]/user-popup/span/span/span")))
         author_name = author_name_box.text
 
         department_box = WebDriverWait(
             driver, 10).until(
             EC.element_to_be_clickable(
                 (By.XPATH,
-                 "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/form/div[24]/div/select-field/div/div/div[2]/div/div[2]/div[1]/span/i")))
+                 "/html/body/div[1]/snap-content/div[2]/div[3]/div/div[2]/form/div[24]/div/select-field/div/div/div[2]/div/div[2]/div[1]/span/i")))
         department_box.click()
         department_box2 = WebDriverWait(
             driver, 10).until(
             EC.element_to_be_clickable(
                 (By.XPATH,
-                 "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/form/div[24]/div/select-field/div/div/div[2]/div/div[2]/ul/li/div[3]")))
+                 "/html/body/div[1]/snap-content/div[2]/div[3]/div/div[2]/form/div[24]/div/select-field/div/div/div[2]/div/div[2]/ul/li/div[3]")))
         department_box2.click()
         accountant_box = WebDriverWait(
             driver, 10).until(
             EC.element_to_be_clickable(
                 (By.XPATH,
-                 "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/form/div[26]/div[2]/select-field/div/div/div[2]/div/div[2]/div[1]/span/i")))
+                 "/html/body/div[1]/snap-content/div[2]/div[3]/div/div[2]/form/div[26]/div[2]/select-field/div/div/div[2]/div/div[2]/div[1]/span/i")))
         accountant_box.click()
         write(ACCOUNTANT, 0.1)
         accountant_box = WebDriverWait(
             driver, 10).until(
             EC.element_to_be_clickable(
                 (By.XPATH,
-                 "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/form/div[26]/div[2]/select-field/div/div/div[2]/div/div[2]/ul/li/div[3]")))
+                 "/html/body/div[1]/snap-content/div[2]/div[3]/div/div[2]/form/div[26]/div[2]/select-field/div/div/div[2]/div/div[2]/ul/li/div[3]")))
         accountant_box.click()
-        sleep(2)
+        sleep(5)
         small_name_box = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.ID, "sName_Document")))
+        # EC.element_to_be_clickable(
+        #     (By.XPATH,
+        #      "/html/body/div[1]/snap-content/div[2]/div[3]/div/div[2]/form/div[29]/div/textarea-field/div/div/div[2]")))
         small_name_box.click()
 
         # write('Про анулювання договору з розробки та видачі ТУ', 0.1)
 
         # write('Про направлення договору з розробки та видачі ТУ', 0.1)
 
-        write('Про видачу ТУ та АНП', 0.1)
-        is_tusk = True
+        # write('Про видачу ТУ та АНП', 0.1)
+        # is_tusk = True
 
-        # write('Про направлення договору ВО', 0.1)
+        write('Про направлення договору ВО', 0.1)
 
         doc_type_box = WebDriverWait(
             driver, 10).until(
             EC.element_to_be_clickable(
                 (By.XPATH,
-                 "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/form/div[30]/div/select-field/div/div/div[2]/div/div[2]/div[1]/span/i")))
+                 "/html/body/div[1]/snap-content/div[2]/div[3]/div/div[2]/form/div[30]/div/select-field/div/div/div[2]/div/div[2]/div[1]/span/i")))
         doc_type_box.click()
         doc_type_box2 = WebDriverWait(
             driver, 10).until(
             EC.element_to_be_clickable(
                 (By.XPATH,
-                 "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/form/div[30]/div/select-field/div/div/div[2]/div/div[2]/ul/li/div[3]")))
+                 "/html/body/div[1]/snap-content/div[2]/div[3]/div/div[2]/form/div[30]/div/select-field/div/div/div[2]/div/div[2]/ul/li/div[3]")))
         doc_type_box2.click()
         delivery_method_box2 = WebDriverWait(
             driver, 10).until(
             EC.element_to_be_clickable(
                 (By.XPATH,
-                 "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/form/div[31]/div/enum-field/div/div/div[2]/div/select/option[6]")))
+                 "/html/body/div[1]/snap-content/div[2]/div[3]/div/div[2]/form/div[31]/div/enum-field/div/div/div[2]/div/select/option[6]")))
         delivery_method_box2.click()
         subdivision_box = WebDriverWait(
             driver, 10).until(
             EC.element_to_be_clickable(
                 (By.XPATH,
-                 "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/form/div[32]/div/select-field/div/div/div[2]/div/div[2]/div[1]/span/i")))
+                 "/html/body/div[1]/snap-content/div[2]/div[3]/div/div[2]/form/div[32]/div/select-field/div/div/div[2]/div/div[2]/div[1]/span/i")))
         subdivision_box.click()
         subdivision_box2 = WebDriverWait(
             driver, 10).until(
             EC.element_to_be_clickable(
                 (By.XPATH,
-                 "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/form/div[32]/div/select-field/div/div/div[2]/div/div[2]/ul/li/div[92]")))
+                 "/html/body/div[1]/snap-content/div[2]/div[3]/div/div[2]/form/div[32]/div/select-field/div/div/div[2]/div/div[2]/ul/li/div[92]")))
         subdivision_box2.click()
         performer_box = WebDriverWait(
             driver, 10).until(
             EC.element_to_be_clickable(
                 (By.XPATH,
-                 "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/form/div[35]/div/select-field/div/div/div[2]/div/div[2]/div[1]/span/i")))
+                 "/html/body/div[1]/snap-content/div[2]/div[3]/div/div[2]/form/div[35]/div/select-field/div/div/div[2]/div/div[2]/div[1]/span/i")))
         performer_box.click()
         write(author_name[:4], 0.1)
         performer_box2 = WebDriverWait(
             driver, 10).until(
             EC.element_to_be_clickable(
                 (By.XPATH,
-                 "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/form/div[35]/div/select-field/div/div/div[2]/div/div[2]/ul/li/div[3]")))
+                 "/html/body/div[1]/snap-content/div[2]/div[3]/div/div[2]/form/div[35]/div/select-field/div/div/div[2]/div/div[2]/ul/li/div[3]")))
         performer_box2.click()
         prior_approval_box = WebDriverWait(
             driver, 10).until(
             EC.element_to_be_clickable(
                 (By.XPATH,
-                 "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/div[1]/div/document-participant-list/div/div[2]/div[1]/div/div[1]/i")))
+                 "/html/body/div[1]/snap-content/div[2]/div[3]/div/div[2]/div[1]/div/document-participant-list/div/div[2]/div[1]/div/div[1]/i")))
         prior_approval_box.click()
+        prior_approval_box2 = WebDriverWait(
+            driver, 10).until(
+            EC.element_to_be_clickable(
+                (By.XPATH,
+                 "/html/body/div[1]/snap-content/div[2]/div[3]/div/div[2]/div[1]/div/document-participant-list/div/div[2]/div[2]/div/div/div/div")))
+        prior_approval_box2.click()
         write(CHIEF, 0.1)
         sleep(3)
         prior_approval_box2 = WebDriverWait(
             driver, 10).until(
             EC.element_to_be_clickable(
                 (By.XPATH,
-                 "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/div[1]/div/document-participant-list/div/div[2]/div[2]/div/div/div/div/div/ul/li/div[3]")))
+                 "/html/body/div[1]/snap-content/div[2]/div[3]/div/div[2]/div[1]/div/document-participant-list/div/div[2]/div[2]/div/div/div/div/div/ul/li/div[3]")))
         prior_approval_box2.click()
         sleep(3)
 
@@ -158,7 +167,7 @@ def feel_in_forms(url):
                 driver, 10).until(
                 EC.element_to_be_clickable(
                     (By.XPATH,
-                     "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/div[2]/div/div/div/div[2]/div[1]/button")))
+                     "/html/body/div[1]/snap-content/div[2]/div[3]/div/div[2]/div[2]/div/div/div/div[2]/div[1]/button")))
             task_button.click()
             task_short_name = WebDriverWait(
                 driver, 10).until(
@@ -172,13 +181,13 @@ def feel_in_forms(url):
                 driver, 10).until(
                 EC.element_to_be_clickable(
                     (By.XPATH,
-                     "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/form/div[47]/issue-block/div/div/div[2]/div[1]/div[2]/div[2]/div/input")))
+                     "/html/body/div[1]/snap-content/div[2]/div[3]/div/div[2]/form/div[47]/issue-block/div/div/div[2]/div[1]/div[2]/div[2]/div/input")))
             deadline.click()
             supervisory_box = WebDriverWait(
                 driver, 10).until(
                 EC.element_to_be_clickable(
                     (By.XPATH,
-                     "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/form/div[47]/issue-block/div/div/div[2]/div[2]/div[1]/div[2]/div/div/span")))
+                     "/html/body/div[1]/snap-content/div[2]/div[3]/div/div[2]/form/div[47]/issue-block/div/div/div[2]/div[2]/div[1]/div[2]/div/div/span")))
             supervisory_box.click()
             write(author_name[:4], 0.1)
             sleep(3)
@@ -186,7 +195,7 @@ def feel_in_forms(url):
                 driver, 10).until(
                 EC.element_to_be_clickable(
                     (By.XPATH,
-                     "/html/body/div[1]/snap-content/div[2]/div[4]/div/div[2]/form/div[47]/issue-block/div/div/div[2]/div[2]/div[1]/div[2]/div/div/div/div/div/ul/li/div[3]/span/div[1]")))
+                     "/html/body/div[1]/snap-content/div[2]/div[3]/div/div[2]/form/div[47]/issue-block/div/div/div[2]/div[2]/div[1]/div[2]/div/div/div/div/div/ul/li/div[3]/span/div[1]")))
             supervisory_box.click()
             sleep(3)
 
